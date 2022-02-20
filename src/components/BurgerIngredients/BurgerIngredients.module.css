@@ -13,21 +13,21 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 8px;
 }
 
 .ingredients__scroll {
     max-height: 664px;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .ingredients__link {
-    text-decoration: none;
-    color: inherit;
     display: flex;
     flex-direction: column;
+    width: 260px;
+    text-decoration: none;
+    color: inherit;
     align-items: center;
-    gap: 8px;
-    max-width: 272px;
 }
 
 .ingredients__price {

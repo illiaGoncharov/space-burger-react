@@ -1,5 +1,8 @@
 import React from 'react'
-import { Tab, CurrencyIcon } from "@ya.praktikum/react-developer-burger-ui-components";
+import { 
+    Tab, 
+    CurrencyIcon 
+} from "@ya.praktikum/react-developer-burger-ui-components";
 import IngredientsStyles from './BurgerIngredients.module.css'
 import PropTypes from 'prop-types'
 
@@ -23,9 +26,9 @@ BurgerIngredients.propTypes = {
 }
 
 function BurgerIngredients(props: any) {
-
     const [current, setCurrent] = React.useState('bun')
 
+    //  upd: switch?
     if (current === 'bun') {
         document.getElementById(current)?.scrollIntoView({
             behavior: 'smooth',
@@ -61,15 +64,17 @@ function BurgerIngredients(props: any) {
 
                 <section id={'bun'}>
                     <h2 className={'text text_type_main-medium'}>Булки</h2>
-                    <ul className={IngredientsStyles.ingredients__list}>
+                    <ul className={`${IngredientsStyles.ingredients__list} mb-10`}>
                         {props.ingredients.map((item: AppProps) => item.type === 'bun' && <li key={item._id}>
-                            <a className={IngredientsStyles.ingredients__link} href='#'>
+                            <a className={IngredientsStyles.ingredients__link} href='/'>
                                 <img src={item.image} alt={item.name} />
                                 <div className={IngredientsStyles.ingredients__price}>
                                     <span className={'text text_type_digits-default'}>{item.price}</span>
                                     <CurrencyIcon type="primary" />
                                 </div>
-                                <h3 className={`${IngredientsStyles.ingredients__title} text text_type_main-default`}>{item.name}</h3>
+                                <h3 className={`${IngredientsStyles.ingredients__title} text text_type_main-default`}>
+                                    {item.name}
+                                </h3>
                             </a>
                         </li>
                         )}
@@ -78,15 +83,17 @@ function BurgerIngredients(props: any) {
 
                 <section id={'sauce'}>
                     <h2 className={'text text_type_main-medium'}>Соусы</h2>
-                    <ul className={IngredientsStyles.ingredients__list}>
+                    <ul className={`${IngredientsStyles.ingredients__list} mb-10`}>
                         {props.ingredients.map((item: AppProps) => item.type === 'sauce' && <li key={item._id}>
-                            <a className={IngredientsStyles.ingredients__link} href='#'>
+                            <a className={IngredientsStyles.ingredients__link} href='/'>
                                 <img src={item.image} alt={item.name} />
                                 <div className={IngredientsStyles.ingredients__price}>
                                     <span className={'text text_type_digits-default'}>{item.price}</span>
                                     <CurrencyIcon type="primary" />
                                 </div>
-                                <h3 className={`${IngredientsStyles.ingredients__title} text text_type_main-default`}>{item.name}</h3>
+                                <h3 className={`${IngredientsStyles.ingredients__title} text text_type_main-default`}>
+                                    {item.name}
+                                </h3>
                             </a>
                         </li>
                         )}
@@ -95,9 +102,9 @@ function BurgerIngredients(props: any) {
 
                 <section id={'main'}>
                     <h2 className={'text text_type_main-medium'}>Начинки</h2>
-                    <ul className={IngredientsStyles.ingredients__list}>
+                    <ul className={`${IngredientsStyles.ingredients__list} mb-10`}>
                         {props.ingredients.map((item: AppProps) => item.type === 'main' && <li key={item._id}>
-                            <a className={IngredientsStyles.ingredients__link} href='#'>
+                            <a className={IngredientsStyles.ingredients__link} href='/'>
                                 <img src={item.image} alt={item.name} />
                                 <div className={IngredientsStyles.ingredients__price}>
                                     <span className={'text text_type_digits-default'}>{item.price}</span>
