@@ -16,11 +16,11 @@ function BurgerConstructor(props: any) {
                     thumbnail={props.construct[0].image}
                 />
             </div>
-            <ul className={`${ConstructorStyles.constructor__list} custom-scroll mt-4 mb-4`}>
+            <ul className={`${ConstructorStyles.constructor__list} custom-scroll mt-4 mb-4 pr-8`}>
                 {props.construct.map((item: AppProps, index: number) => index > 1 && index < props.construct.length && (
                     <li className={ConstructorStyles.constructor__listitem} key={item._id + index}>
                         <DragIcon type="primary" />
-                        <ConstructorElement
+                        <ConstructorElement 
                             text={item.name}
                             price={item.price}
                             thumbnail={item.image}
