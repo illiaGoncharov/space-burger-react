@@ -21,7 +21,7 @@
 }
 
 .constructor__bottomitem {
-    margin-right: 14px;
+    composes: constructor__topitem;
 }
 
 .constructor__listitem {
@@ -38,6 +38,6 @@
 
 .constructor__wrap {
     display: flex;
-    gap: 10px;
     align-items: center;
+    gap: 10px;
 }

@@ -33,9 +33,9 @@ function BurgerConstructor(props: any) {
                 <ConstructorElement
                     type="bottom"
                     isLocked={true}
-                    text={`${props.construct[1].name} (низ)`}
-                    price={props.construct[1].price}
-                    thumbnail={props.construct[1].image}
+                    text={`${props.construct[0].name} (низ)`}
+                    price={props.construct[0].price}
+                    thumbnail={props.construct[0].image}
                 />
             </div>
             <section className={`${ConstructorStyles.constructor__totalsum} mt-10`}>
