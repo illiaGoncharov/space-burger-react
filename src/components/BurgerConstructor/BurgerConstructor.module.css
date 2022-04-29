@@ -1,0 +1,43 @@
+.constructor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-items: end;
+    align-content: start;
+}
+
+.constructor__list {
+    max-height: 464px;
+    overflow-y: scroll;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 8px 0px 0px;
+    gap: 16px;
+}
+
+.constructor__topitem {
+    margin-right: 20px;
+}
+
+.constructor__bottomitem {
+    composes: constructor__topitem;
+}
+
+.constructor__listitem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.constructor__totalsum {
+    display: flex;
+    gap: 40px;
+    margin-right: 14px;
+}
+
+.constructor__wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
